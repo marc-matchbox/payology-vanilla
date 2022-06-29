@@ -1,0 +1,324 @@
+:root {
+	--primary: #3e1374;
+	--primary-light: #6c1dd0;
+	--primary-dark: #300e59;
+	--primary-darkness: #1b0833;
+
+	--shadow: #00000029;
+
+	--secondary: #707070;
+	--secondary-light: #9a9a9a;
+
+	--divisor: #e6e6e6;
+
+	--white: #ffffff;
+	--light: #fafafa;
+
+	--info-light: 176, 224, 226;
+}
+
+@font-face {
+	font-family: MuseoSans;
+	src: url(/assets/fonts/MuseoSansCondensed-500.ttf);
+}
+
+@font-face {
+	font-family: MuseoSansLight;
+	src: url(/assets/fonts/MuseoSansCondensed-300.ttf);
+}
+
+@font-face {
+	font-family: MuseoSansBold;
+	src: url(/assets/fonts/MuseoSansCondensed-700.ttf);
+}
+
+* {
+	-webkit-font-smooth: antialised;
+	font-family: MuseoSans;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+
+	box-sizing: border-box;
+
+	font-size: 62.5%;
+
+	color: var(--white);
+
+	background: rgba(var(--info-light), 0.15);
+}
+
+body {
+	overflow-x: hidden;
+}
+
+button,
+input,
+select {
+	height: 4.4rem;
+	border-radius: 0.3rem;
+	background: var(--white);
+}
+
+select {
+	-moz-appearance: none; /* Firefox */
+	-webkit-appearance: none; /* Safari and Chrome */
+	appearance: none;
+	width: 100%;
+}
+
+.select-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.select-wrapper::after {
+	content: '▼';
+	font-size: 1.2rem;
+	color: var(--secondary-light);
+	top: 1.5rem;
+	right: 1.5rem;
+	position: absolute;
+}
+
+input,
+select {
+	border: 0.1rem solid var(--secondary-light);
+	margin-bottom: 2rem;
+
+	padding-inline: 1.2rem;
+
+	font-size: 1.8rem;
+}
+
+button {
+	background: var(--primary-dark);
+	font-size: 1.8rem;
+	color: var(--white);
+
+	border: 0;
+
+	font-family: MuseoSans;
+
+	transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+	background: var(--primary-light);
+	cursor: pointer;
+}
+
+button:active {
+	background: var(--white);
+	color: var(--primary-darkness);
+	border: 1px solid var(--primary);
+	cursor: pointer;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+.mb-0 {
+	margin-bottom: 0px !important;
+}
+
+.item-list {
+	padding: 1.4rem;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-list span {
+	font-family: MuseoSansLight;
+	font-size: 1.8rem;
+	color: var(--primary-darkness);
+}
+
+.d-none {
+	display: none;
+}
+
+.container {
+	display: flex;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background: rgba(255, 255, 255, 0.15);
+	box-shadow: 0px 0.3rem 0.6rem var(--shadow);
+
+	width: 100%;
+
+	display: flex;
+	z-index: 1;
+}
+
+.sidebar {
+	min-width: 20rem;
+	max-width: 24rem;
+	width: 100%;
+
+	height: 100vh;
+
+	background: var(--white) 0% 0% no-repeat padding-box;
+	box-shadow: 0px 0.3rem 0.6rem var(--shadow);
+}
+
+.logo {
+	padding: 1.5rem 2rem;
+	max-width: 24rem;
+	width: 100%;
+	/* text-align: center; */
+}
+
+.bg-banner {
+	background: url(/assets/img/background.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.content {
+	max-width: 75.8rem;
+	width: 100%;
+
+	padding: 2.7rem;
+	margin-inline: 2.7rem;
+	border-radius: 0.3rem;
+
+	box-shadow: 0 0.3rem 0.6rem var(--shadow);
+}
+
+.bg-white {
+	background-color: var(--white);
+}
+
+.font-16 {
+	font-size: 1.6rem;
+}
+
+.title {
+	color: var(--primary);
+	text-align: left;
+	font-family: MuseoSansBold;
+	font-size: 2.8rem;
+	letter-spacing: 0px;
+}
+
+.title::after {
+	content: '';
+
+	display: block;
+	border-bottom: 0.2rem solid var(--primary);
+	width: 5rem;
+
+	margin-top: 1.2rem;
+}
+
+.border-right {
+	border-right: 1px solid var(--secondary);
+}
+
+.border-bottom {
+	border-bottom: 1px solid var(--divisor);
+}
+
+.border-top {
+	border-top: 1px solid var(--primary-darkness);
+}
+
+.mt-2 {
+	margin-top: 2rem;
+}
+
+.pt-2 {
+	padding-top: 3rem;
+}
+
+.px-2 {
+	padding-inline: 2.7rem;
+}
+
+.pr-2 {
+	padding-right: 2.7rem;
+}
+
+.pl-2 {
+	padding-left: 2.7rem;
+}
+
+.font-weight-bolder {
+	font-weight: bolder;
+}
+
+.footer {
+	text-align: center;
+
+	font-family: MuseoSansLight;
+	font-size: 1.5rem;
+
+	width: 100%;
+
+	position: absolute;
+	bottom: 0;
+
+	z-index: -1;
+
+	background-color: var(--white);
+
+	padding-block: 2rem;
+
+	color: var(--primary);
+	font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1080px) {
+	.mt-header-on-mobile {
+		margin-top: 4rem;
+	}
+
+	.remove-border-right-on-mobile {
+		border-right: 0;
+	}
+
+	.flex-wrap-on-mobile {
+		flex-wrap: wrap;
+	}
+
+	.sidebar {
+		display: none;
+	}
+}
